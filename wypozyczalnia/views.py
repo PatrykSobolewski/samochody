@@ -48,7 +48,7 @@ class UserDetail(generics.RetrieveAPIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
-        return Response({'students': reverse(OsobaViewSet.name, request=request),
-                         'grades': reverse(SamochodViewSet.name, request=request),
+        return Response({'osoba': reverse(OsobaViewSet.name, request=request),
+                         'samochod': reverse(SamochodViewSet.name, request=request),
                          'users': reverse(UserList.name, request=request)
                          })
